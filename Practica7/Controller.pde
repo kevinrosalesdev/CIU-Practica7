@@ -33,7 +33,7 @@ class Controller {
               p7.isMenu = true;
               p7.person = new Person();
               p7.piano = new Piano(p7);
-              p7.controller = new Controller(p7, person, piano);
+              p7.controller = new Controller(p7, p7.person, p7.piano);
             }
             person.changeStatus(-4);
           }else{

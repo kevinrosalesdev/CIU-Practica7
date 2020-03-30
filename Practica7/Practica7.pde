@@ -27,7 +27,6 @@ void setup() {
   person = new Person();
   piano = new Piano(this);
   controller = new Controller(this, person, piano);
-  text("HOLA", 0.375*width, 0.1*height);
 }
 
 void draw() {  
@@ -83,27 +82,7 @@ void drawPersonMoodImage(){
   rect(0, 0, 0.75*width, 0.75*height);
   
   if (!isMenu) image(person.img[(int) map(personStatus, 0, 100, 0, 7.999)], 0.1*width, 0.1*height, 0.55*width, 0.55*height);
-  else{
-    textFont(font, 20);
-    fill(255, 0, 0);
-    textAlign(CENTER);
-    text(bigMessage, 0.375*width, 0.1*height);
-    fill(128, 0, 255);
-    textFont(menuFont, 13.5);
-    text("Tu objetivo será animar a la persona que sustituirá a este texto en cuanto le des a", 0.35*width, 0.175*height);
-    text("Puedes pulsarlo de nuevo para volver a este menú y reiniciar la partida.", 0.375*width, 0.225*height);
-    text("Para animarlo, deberás tocar el piano de abajo usando las teclas que se muestran encima de estas", 0.375*width, 0.3*height); 
-    text("en azul. ¡Prueba a tocarlo antes de empezar! (fila de números de cualquier teclado).", 0.375*width, 0.35*height);
-    text("Cuando comiences, las teclas de la partitura se marcarán en amarillo.", 0.375*width, 0.425*height);
-    text("¡Síguela con buen ritmo para sacar buena puntuación!", 0.375*width, 0.475*height);
-    text("Además, ¡deberás soplar suavemente el micrófono para darle una brisa agradable a la persona!", 0.375*width, 0.55*height);
-    text("El estado de ánimo de la persona se irá actualizando en la barra de la derecha ->", 0.375*width, 0.6*height);
-    textFont(menuFont, 17.5);
-    text("¡Suerte!", 0.375*width, 0.7*height);
-    textFont(menuFont, 13.5);
-    fill(156, 159, 255);
-    text("ENTER.", 0.685*width, 0.175*height);
-  }
+  else drawMenu();
   
   noFill();
   stroke(0);
@@ -147,4 +126,26 @@ void keyPressed() {
 
 void keyReleased() {
   controller.manageKeysPressed(key, false);
+}
+
+void drawMenu(){
+    textFont(font, 20);
+    fill(255, 0, 0);
+    textAlign(CENTER);
+    text(bigMessage, 0.375*width, 0.1*height);
+    fill(128, 0, 255);
+    textFont(menuFont, 13.5);
+    text("Tu objetivo será animar a la persona que sustituirá a este texto en cuanto le des a", 0.35*width, 0.175*height);
+    text("Puedes pulsarlo de nuevo para volver a este menú y reiniciar la partida.", 0.375*width, 0.225*height);
+    text("Para animarlo, deberás tocar el piano de abajo usando las teclas que se muestran encima de estas", 0.375*width, 0.3*height); 
+    text("en azul. ¡Prueba a tocarlo antes de empezar! (fila de números de cualquier teclado).", 0.375*width, 0.35*height);
+    text("Cuando comiences, las teclas de la partitura se marcarán en amarillo.", 0.375*width, 0.425*height);
+    text("¡Síguela con buen ritmo para sacar buena puntuación!", 0.375*width, 0.475*height);
+    text("Además, ¡deberás soplar suavemente el micrófono para darle una brisa agradable a la persona!", 0.375*width, 0.55*height);
+    text("El estado de ánimo de la persona se irá actualizando en la barra de la derecha ->", 0.375*width, 0.6*height);
+    textFont(menuFont, 17.5);
+    text("¡Suerte!", 0.375*width, 0.7*height);
+    textFont(menuFont, 13.5);
+    fill(156, 159, 255);
+    text("ENTER.", 0.685*width, 0.175*height);
 }

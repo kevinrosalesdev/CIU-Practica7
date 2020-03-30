@@ -23,6 +23,4 @@ class Person{
     if (status > 100.0) status = 100.0;
     else if (status < 0.0) status = 0.0;
   }  
- 
-  
 }
