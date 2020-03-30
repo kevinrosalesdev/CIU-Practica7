@@ -215,4 +215,4 @@ Se recuerda que como dice la información por pantalla, el inicio del juego se r
 - [4] Extrapixel. [GifAnimation Processing Library.](https://github.com/extrapixel/gif-animation)
 - [5] *School of Physics*. *UNSW Sidney*. [Note names, MIDI numbers and frequencies](https://newt.phys.unsw.edu.au/jw/notes.html).
 - [6] Damien Quartz. [Minim](http://code.compartmental.net/tools/minim/)
-
+- [7] Needpix. [Face images](https://www.needpix.com/photo/download/95248/emoticons-emotions-smilies-faces-yellow-happy-laughing-sad-angry)
